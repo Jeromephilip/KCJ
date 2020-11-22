@@ -3,6 +3,7 @@ const button = document.querySelector('input')
 
 button.addEventListener('click', nextPage)
 
+
 function nextPage () {
     localStorage.setItem('categories', getSelectedValue())
     location.href = 'pages/categories.html'
