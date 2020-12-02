@@ -1,17 +1,15 @@
-const button = document.querySelector('input')
+const button = document.querySelector('input');
 // Array of different options
 
-button.addEventListener('click', nextPage)
-
+button.addEventListener('click', nextPage);
 
 function nextPage () {
-    localStorage.setItem('categories', getSelectedValue())
-    location.href = 'pages/categories.html'
+    location.href = 'pages/categories.html' + '?countCategories=' + getSelectedValue();
 }
 
 function getSelectedValue() {
-    var selectedValue = document.getElementById('dropdown').value
-    return selectedValue
+    var selectedValue = document.getElementById('dropdown').value;
+    return selectedValue;
 }
 
 
